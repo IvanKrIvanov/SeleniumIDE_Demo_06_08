@@ -13,6 +13,13 @@ public class TC01IfUserIsInvalidTryAgainTest
     [SetUp]
     public void SetUp()
     {
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.AddArgument("headless");
+        chromeOptions.AddArgument("no-sandbox");
+        chromeOptions.AddArgument("disable-dev-shm-usage");
+        chromeOptions.AddArgument("disable-gpu");
+        chromeOptions.AddArgument("windows");
+
 		var options = new ChromeOptions();
 		options.AddArguments("--disable-search-engine-choice-screen");
 		options.AddArgument("--incognito");
@@ -26,6 +33,7 @@ public class TC01IfUserIsInvalidTryAgainTest
 		options.AddArgument("--start-maximized");
 		options.AddArgument("--disable-default-apps");
 		driver = new ChromeDriver(options);
+
 		driver = new ChromeDriver();
         js = (IJavaScriptExecutor)driver;
         vars = new Dictionary<string, object>();
