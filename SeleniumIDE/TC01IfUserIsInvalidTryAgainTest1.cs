@@ -18,7 +18,7 @@ public class TC01IfUserIsInvalidTryAgainTest
         chromeOptions.AddArgument("no-sandbox");
         chromeOptions.AddArgument("disable-dev-shm-usage");
         chromeOptions.AddArgument("disable-gpu");
-        chromeOptions.AddArgument("windows");
+        chromeOptions.AddArgument("window-size=192x1080");
 
 		var options = new ChromeOptions();
 		options.AddArguments("--disable-search-engine-choice-screen");
